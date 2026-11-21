@@ -1,18 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
+// import AppHeader from './AppHeader.vue'
+import AppHeader from './components/AppHeader.vue';
 
-import SingleLadyAppHeader from './components/SingleLadyAppHeader.vue';
-import SingleLadyAppFooter from './components/SingleLadyAppFooter.vue';
-import SingleLadyAppTextEditor from './components/SingleLadyAppTextEditor.vue';
-import SingleLadyAssistantPanel from './components/SingleLadyAssistantPanel.vue';
-
-const whatever = ref('something');
-
+const bruker1 = ref('dlflddflrld!')
 </script>
 
 <template>
-  <SingleLadyAppHeader />
-  <SingleLadyAppTextEditor v-model:text="whatever"/>
-  <SingleLadyAssistantPanel />
-  <SingleLadyAppFooter />
+
+  <!-- <AppHeader v-model:user-name="bruker1"/> -->
+   <AppHeader v-model:user-name="bruker1"/>
 </template>
