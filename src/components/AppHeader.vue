@@ -5,7 +5,7 @@ defineProps<{
 }>()
 const emit = defineEmits<{
   'update:userName': [value: string],
-  'update:userName2': [value: string]
+  'update:userName2': [value: string],
 }>();
 
 </script>
