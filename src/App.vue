@@ -7,7 +7,7 @@ import MyClicker from './components/MyClicker.vue';
 const bruker1 = ref('a');
 const bruker2 = ref('');
 
-const teller2 = ref(0);
+const tall = ref(0);
 
 // function greeting() {
 //   const nameLengths = [userName.trim().length, userName2.trim().length];
@@ -22,14 +22,14 @@ const teller2 = ref(0);
 //   }
 // }
 
-// const klikker = computed( () => {
-//     tall.value++; 
-// });
+const klikker = computed( () => {
+    tall.value++; 
+});
 </script>
 
 <template>
 
   <!-- <AppHeader v-model:user-name="bruker1"/> -->
    <AppHeader v-model:user-name="bruker1" v-model:user-name2="bruker2"/>
-   <MyClicker v-model:tall="teller2" @increase-by="teller2++;"/>
+   <MyClicker v-model:globalt-tall="tall" @klikki-paa="tall++"/>
 </template>

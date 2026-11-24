@@ -1,19 +1,16 @@
 <script setup lang="ts">
+import { ref, computed } from 'vue';
+
+const lokalTall = ref(0);
 defineProps<{
-    tall: number
+    globaltTall: number
 }>();
-const emit = defineEmits<{
-    'increaseBy': [val: number]
+defineEmits<{
+    'klikkiPaa': [val: number]
 }>();
+
 </script>
 
 <template>
-    <div>
-        <p>
-        </p>
-        <button @click="$emit('increaseBy', 5)">
-            {{ tall }}
-            Legg til 5 I guess
-        </button>
-    </div>
+    <button @click="$emit('klikkiPaa', 5)">Jeg teller: {{ globaltTall }}</button>
 </template>
