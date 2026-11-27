@@ -1,9 +1,8 @@
 <script setup lang="ts">
-defineProps<{}>();
-const emit = defineEmits<{}>();
+const tittel = defineModel<string>({default: 'Foreløpig tittel'});
 
 </script>
 
 <template>
-    I'm a single lady assistant panel
+    <h2>{{ tittel }}</h2>
 </template>
