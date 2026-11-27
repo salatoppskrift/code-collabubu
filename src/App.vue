@@ -4,7 +4,7 @@ import { ref, computed } from 'vue'
 import AppHeader from './components/AppHeader.vue';
 import MyClicker from './components/MyClicker.vue';
 
-const bruker1 = ref('a');
+const bruker1 = ref('');
 const bruker2 = ref('');
 
 const tall = ref(0);
@@ -22,14 +22,23 @@ const tall = ref(0);
 //   }
 // }
 
-const klikker = computed( () => {
-    tall.value++; 
+function mysillyfunction() { }
+
+const klikker = computed(() => {
+    tall.value++;
 });
+
+const bb = ref(true);
 </script>
 
 <template>
 
-  <!-- <AppHeader v-model:user-name="bruker1"/> -->
-   <AppHeader v-model:user-name="bruker1" v-model:user-name2="bruker2"/>
-   <MyClicker v-model:globalt-tall="tall" @klikki-paa="tall++"/>
+    <!-- <AppHeader v-model:user-name="bruker1"/> -->
+    <AppHeader v-model:user-name="bruker1" v-model:user-name2="bruker2" />
+    <MyClicker :globalt-tall="tall" @klikki-paa="klikker()" />
 </template>
+<style scoped>
+.red {
+    color: maroon
+}
+</style>
