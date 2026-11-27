@@ -6,11 +6,11 @@ defineProps<{
     globaltTall: number
 }>();
 defineEmits<{
-    'klikkiPaa': [val: number]
+    'klikkiPaa': []
 }>();
 
 </script>
 
 <template>
-    <button @click="$emit('klikkiPaa', 5)">Jeg teller: {{ globaltTall }}</button>
+    <button @click="$emit('klikkiPaa')">Jeg teller: {{ globaltTall }}</button>
 </template>
